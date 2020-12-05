@@ -232,12 +232,13 @@ h6 {
   padding: 0 33px;
   font-family: Poppins, Arial, "Helvetica Neue", sans-serif;
   cursor: pointer;
-  color: #fff;
+  color: #212529;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
   font-size: 18px;
+  font-weight: 400;
 }
 
 .btn--radius {
@@ -253,11 +254,11 @@ h6 {
 }
 
 .btn--green {
-  background: #57b846;
+  background: #bcfa19;
 }
 
 .btn--green:hover {
-  background: #4dae3c;
+  background: #dcf829;
 }
 
 /* ==========================================================================

@@ -8,12 +8,6 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="description" content="UltraEgo" />
-    <link
-      rel="icon"
-      href="./images/logo-without-bg.png"
-      type="image/gif"
-      sizes="16x16"
-    />
 
     <meta name="author" content="UltraEgo" />
     <meta name="keywords" content="UltraEgo" />
@@ -48,6 +42,16 @@
 
     <!-- Main CSS-->
     <link href="css/main.css" rel="stylesheet" media="all" />
+      
+    <script>
+        function onPressSubmit() {
+            if (!window.confirm("Please confirm your Participation Details, and press OK to proceed, else press Cancel.")) {
+                while(true) {
+                    window.location.href = "https://ultra-ego.vercel.app/";
+                }
+            }
+        }
+    </script>
   </head>
 
   <body>
@@ -61,7 +65,7 @@
               method="POST"
               action="https://getform.io/f/45aa4f28-6dd5-4db4-9c80-4bedf618e6fb"
             >
-              <div class="input-group">
+              <div class="input-group" id="name">
                 <input
                   class="input--style-3"
                   type="text"
@@ -70,9 +74,11 @@
                   name="name"
                 />
               </div>
-              <div class="input-group">
+                
+              <div class="input-group" id="number">
                 <input
                   class="input--style-3"
+                  maxlength="10"
                   required
                   type="tel"
                   placeholder="Phone number"
@@ -82,27 +88,20 @@
                 <i class="zmdi zmdi-smartphone-android input-icon"></i>
               </div>
 
-              <div class="input-group">
-                <input
-                  class="input--style-3"
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                />
-              </div>
-              <div class="input-group">
+              <div class="input-group" id="code">
                 <input
                   class="input--style-3"
                   type="text"
+                  maxlength="6"
                   placeholder="6 Digit Participation Code"
                   required
                   pattern="[A-Z0-9]{6}"
                   name="code"
+                  id="codeinner"
                 />
               </div>
-
-              <div class="p-t-10">
-                <button class="btn btn--pill btn--green" type="submit">
+                <div class="p-t-10">
+                <button class="btn btn--pill btn--green" type="submit" onclick="onPressSubmit()">
                   Submit
                 </button>
               </div>
